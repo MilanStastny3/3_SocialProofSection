@@ -1,0 +1,293 @@
+/* VARIABLES */
+:root {
+  --white: hsl(0, 0%, 100%);
+  --dgm: hsl(303, 10%, 53%); /* Dark Grayish Magenta */
+  --lgm: hsl(300, 24%, 96%); /* Light Grayish Magenta */
+  --vdm: hsl(300, 43%, 22%); /* Very Dark Magenta */
+  --lightPink: rgb(238, 104, 164);
+}
+
+/* GENERAL */
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* background-color: var(--white); */
+  background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+  font-family: 'Spartan', sans-serif;
+  font-size: 15px;
+}
+
+ul li {
+  list-style: none;
+}
+
+/* CLEAR FIX */
+.group:before,
+.group:after {
+    content: " ";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+.group {
+  *zoom: 1;
+}
+
+/* MAIN CONTENT */
+
+main {
+  width: 77%;
+  margin: 8.5em auto 0 auto;
+}
+
+.content {
+  margin-bottom: 4em;
+}
+
+article {
+  display: inline-block;
+  width: 43%;
+}
+
+aside {
+  display: inline-block;
+  width: 37%;
+}
+
+article h1 {
+  margin: 0 0 .4em 0;
+  font-size: 3em;
+  color: var(--vdm);
+}
+
+article p {
+  color: var(--dgm);
+  line-height: 1.8em;
+}
+
+aside {
+  float: right;
+}
+
+.ratings li {
+  background-color: var(--lgm);
+  padding: 1em 2em;
+  margin-bottom: 1.8em;
+  border-radius: 0.53em; /* 8/15 */
+}
+
+.ratings li:first-child {
+  margin-top: .8em;
+}
+
+.stars {
+  display: inline-block;
+}
+
+.ratings p {
+  display: inline-block;
+  margin-left: 1.2em;
+  color: var(--vdm);
+  font-size: .85em;
+  font-weight: 700;
+}
+
+.middle-row {
+  position: relative;
+  left: -2.8em;
+}
+
+.top-row {
+  position: relative;
+  left: -5.6em;
+}
+
+/* COMMENTS SECTION */
+
+.comments {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5em;
+}
+
+.comments section {
+  background-color: var(--vdm);
+  border-radius: .7em;
+  padding: 2.8em 2.1em;
+  position:relative;
+  width: 30%;
+}
+
+.middle-comment {
+  top: 1.5em;
+}
+
+.right-comment {
+  top: 3em;
+}
+
+.comments img {
+  border-radius: 50%;
+  margin-bottom: 1.3em;
+  width: 50px;
+  height: auto;
+}
+
+.name-status {
+  display: inline-block;
+  float: right;
+  margin-top: .5em;
+  width: 70%;
+}
+
+.name-status h4 {
+  line-height: 1.4em;
+}
+
+.bold-h4 {
+  color: var(--lgm);
+}
+
+.normal-h4 {
+  font-weight: 400;
+  color: var(--lightPink);
+}
+
+.comments p {
+  color: var(--lgm);
+  font-size: .85em;
+  line-height: 1.5em;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 1em;
+  color: var(--vdm);
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--dgm);
+}
+
+.footer a:hover,
+.footer a:focus {
+  color: var(--lightPink);
+}
+
+@media (max-width: 1350px) {
+
+  .stars {
+    display: flex;
+    justify-content: center;
+    margin-bottom: .6em;
+  }
+
+  .stars img {
+    padding-left: 8px;
+  }
+
+  .ratings p {
+    display: block;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 1050px) {
+
+  main {
+    margin-top: 5.5em;
+  }
+
+  article,
+  aside {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+
+  article {
+    text-align: center;
+    margin-bottom: 3em;
+  }
+
+  .middle-row,
+  .top-row {
+    position: static;
+  }
+
+  .comments {
+    text-align: center;
+  }
+
+  .comments img,
+  .name-status {
+    display: block;
+    float: none;
+  }
+
+  .comments img {
+    margin: 0 auto 1em auto;
+    width: 70px;
+    height: auto;
+  }
+
+  .name-status {
+    margin: 0 auto 1.5em auto;
+  }
+
+}
+
+@media (max-width: 850px) {
+
+  .comments {
+    display: block;
+  }
+
+  .comments section {
+    width: 100%;
+  }
+
+
+}
+
+@media (max-width: 500px) {
+
+  body {
+    background-image: url(../images/bg-pattern-top-mobile.svg), url(../images/bg-pattern-bottom-mobile.svg);
+  }
+
+  article h1 {
+    font-size: 2em;
+  }
+
+}
+
+/* 
+    .comments img {
+    display: inline-block;
+    width: 60px;
+    height: auto;
+  }
+
+  .name-status {
+    display: inline-block;
+    float: right;
+    margin: .5em 2.5em 0 0;
+  }
+*/
